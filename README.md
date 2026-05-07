@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # fareed_biodata_app
 
 A new Flutter project.
@@ -15,3 +16,7 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+=======
+# Fareed-Profile-App
+Flutter Assignment Project. Display basic personal information about me.
+>>>>>>> 8ffc13c2d66c4151e1601092cf5a56195f54f861

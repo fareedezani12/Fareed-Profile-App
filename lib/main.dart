@@ -27,15 +27,14 @@ class ProfilePage extends StatelessWidget {
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: [Color(0xFFE3F2FD), Color(0xFFF3E5F5)],
+          image: DecorationImage(
+            image: AssetImage("assets/background.jpg"),
+            fit: BoxFit.cover,
           ),
         ),
         child: SafeArea(
           child: SingleChildScrollView(
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+            padding: const EdgeInsets.all(16),
             child: Column(
               children: [
                 // CARD WITH BACKGROUND COVER + PROFILE IMAGE
@@ -160,7 +159,7 @@ class ProfilePage extends StatelessWidget {
                         crossAxisCount: 2,
                         mainAxisSpacing: 12,
                         crossAxisSpacing: 12,
-                        childAspectRatio: 2.4,
+                        childAspectRatio: 1.8,
                         children: [
                           _infoTile(
                             Icons.cake_outlined,
@@ -182,8 +181,8 @@ class ProfilePage extends StatelessWidget {
                           ),
                           _infoTile(
                             Icons.tag_faces,
-                            "Tagline",
-                            "Code. Create. Conquer.",
+                            "Study",
+                            "Software Engineering, UPSI",
                             Colors.green,
                           ),
                         ],
@@ -220,21 +219,21 @@ class ProfilePage extends StatelessWidget {
                       const SizedBox(height: 16),
 
                       // Social chips
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
+                      Wrap(
+                        alignment: WrapAlignment.center,
+                        spacing: 12,
+                        runSpacing: 12,
                         children: [
                           _socialChip(
                             Icons.camera_alt,
                             "Instagram",
                             'https://instagram.com/fareedezani',
                           ),
-                          const SizedBox(width: 12),
                           _socialChip(
                             Icons.code,
                             "GitHub",
                             'https://github.com/fareedezani12',
                           ),
-                          const SizedBox(width: 12),
                           _socialChip(
                             Icons.message,
                             "Tiktok",
@@ -286,6 +285,8 @@ class ProfilePage extends StatelessWidget {
               ),
               Text(
                 value,
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
                 style: const TextStyle(
                   fontSize: 12,
                   fontWeight: FontWeight.w600,
